@@ -1,0 +1,327 @@
+
+*{
+  box-sizing: border-box;
+  position: relative;
+}
+
+body{
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgba(0 ,0 ,0 , .75);
+  background-color: #fafafa;
+} 
+.main{
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1.7fr 2.3fr;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #ffffff, #e1e1e1);
+  box-shadow:  7px 7px 15px #e1e1e1, 
+               -7px -7px 15px #ffffff;
+  
+}
+/*== Start of the Global styles ==*/
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+button:hover{
+  opacity: .75;
+}
+
+/*== End of the Global styles ==*/
+/*== Start Things in common ==*/
+.right, .left,.to-do-list,.write-note input[type="text"], .write-note textarea,.write-note .note-creation-button button,.note{
+  padding: 10px;
+}
+.checkbox input[type="checkbox"],.checkbox label{
+  margin-bottom: 10px;
+  display: inline-block;
+
+}
+.d-flex,.color-menu li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*== End Things in common ==*/
+/*=== Start elements with pointer and other effects ===*/
+.yymm:hover, .d-type:hover, .options:hover, .d-grid li:hover, .event:hover, .yymm:hover,
+.d-type:active, .options:active, .d-grid li:active,
+.event:active{
+  cursor: pointer;
+}
+/*=== End elements with pointer and other effects ===*/
+
+/*=== Start calender main ===*/
+.calender-main,.checkbox{
+  width: 350px;
+}
+/*=== End calender main ===*/
+/*=== Start top of the calender===*/
+.yymm{
+  flex:1;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px
+}
+.d-type,.options{
+  margin-left: 15px;
+  padding: 5px
+}
+.options{
+  font-size: 12px;
+}
+/*=== End top of the calender ===*/
+/*=== Start calender body ===*/
+
+.d-grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+.d-grid li{
+  width: 50px;
+  height: 42px;
+  line-height: 52px;
+  
+}
+.calender ul:first-child li{
+  cursor: default;
+}
+.days li{
+  line-height: 13px;
+  height: 14px;
+  
+}
+.days{
+  color: #7f7f7f;
+  font-size: 9px;
+}
+
+.d-grid .extra{
+  color: #97c5cd;
+  }
+/*=== End calender body ===*/
+
+/*== Start todo list ==*/
+.to-do-list{
+  margin-top: 20px;
+}
+.title h3{
+  margin: 3px 3px 10px 3px;
+}
+.add-new{
+  margin-top: 10px;
+  font-weight: 500;
+  color: #97c5cd;
+}
+.add i{
+  font-size: 12px;
+  margin: 3px 3px 3px 4px;
+  color: #97c5cd;
+}
+.checkbox input[type="checkbox"]
+{
+  height: 13px;
+  width: 13px;
+}
+
+
+/*== End todo list ==*/
+
+/*== Start notes ==*/
+
+.notes{
+  height: 550px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.notes .write-note, .notes .note{
+  width: 46%;
+  margin-right: 27px;
+}
+.notes h3{
+  margin: 0 3px 16px 3px;
+}
+.write-note input[type="text"], .write-note textarea{
+  font-family: 'Muli', sans-serif;
+  width: 100%;
+  margin-bottom: 4px;
+  border: none;
+border-radius: 5px;
+ 
+}
+.write-note input[type="text"]{
+  box-shadow:  -11px -6px 30px 1px #e6e6e6,
+               -14px 2px 28px -3px #ffffff00
+}
+.write-note textarea{
+  box-shadow:  -1px 0px 28px -40px #ffffff, 
+             -9px 10px 30px -3px #e6e6e6; 
+  
+}
+.write-note-subject .chose-color{
+  position: absolute;
+  left: 90%;
+  top: 7px;
+  border-radius: 5px;
+  height: 22px;
+  width: 22px;
+  background-color: #97c5cd;
+}
+.write-note input[type="text"]::placeholder, .write-note textarea::placeholder {
+      color: #7f7f7f;
+}
+
+.write-note .note-creation-button button{
+  background-color: inherit;
+  border-radius: 5px;
+  height: 36px;
+  width: 45%;
+  margin-bottom: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: #97c5cd;
+  box-shadow: -12px -8px 28px -40px #ffffff, -12px 5px 30px -3px #e6e6e6;
+  color: #fff;
+}
+
+.note{
+    color: #fff;
+    opacity: .75;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    min-height: 110px;
+    background-color: #fff;
+    box-shadow:  -1px 0px 28px -40px #ffffff, 
+             -12px 5px 30px -3px #e6e6e6;
+}
+.note-info {
+  align-items: end;
+}
+
+.note-info h4{
+  flex: 1;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+.note-default{
+  color: rgba(0 ,0 ,0 , .85);
+}
+.note-info button.chose-color{
+    margin-top: 1px;
+    margin-left: 6px;
+    border-radius: 5px;
+    height: 18px;
+    width: 18px;
+    background-color: #97c5cd;
+}
+.note-blue .note-info button.chose-color{
+  background-color: #fff;
+}
+.write-note-subject .color-menu{
+  top: 31px;
+  right: 8px;
+}
+.color-menu{
+  display: none;
+  z-index: 99;
+  opacity: 1;
+  color: rgba(0, 0, 0, .75);
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow:  5px 4px 13px #e8e8e8,
+                -2px 8px 13px #ffffff;
+  position: absolute;
+  width: 85px;
+  top: 22px;
+  right: -5px;
+  overflow: hidden;
+}
+.note-blue .color-menu{
+  border-radius: 5px;
+  background: #97c5cd;
+  box-shadow:  5px 4px 13px #80a7ae,
+               -3px 1px 13px #80a7ae;
+}
+.note-black .color-menu{
+  border-radius: 5px;
+  background: #828687;
+  box-shadow:  5px 4px 13px #767a7b,
+               -3px 1px 13px #8e9293;
+}
+.note:nth-child(6) .color-menu{
+  display: block;
+}
+
+.color-menu li{
+  padding: 5px 5px 5px 8px;
+  text-align: right;
+  cursor: pointer;
+}
+.color-menu li:hover{
+  background-color: #cad8f5;
+
+}
+.color-menu li span{
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 5px;
+  height: 18px;
+  width: 18px;
+  background-color: #97c5cd;
+}
+.color-menu li span.black{
+  background-color: #828687;
+
+}
+.color-menu li span.default{
+  background-color: #fff;
+  border-color: #97c5cd
+
+}
+.note p{
+  margin: 3px 0;
+  font-size: 14px;
+}
+.note-blue{
+    background-color: #97c5cd;
+
+}
+.note-black{
+    background-color: #828687;
+}
+.title h3, .right h3, .yymm{
+  color: #97c5cd;
+
+}
+.pages{
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    color: #97c5cd;
+    font-weight: 700;
+}
+ 
+/*== End notes ==*/

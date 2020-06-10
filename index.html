@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <title>Calender</title>
+  </head>
+<body>  
+	<!-- Start main div -->
+	<div class="main">
+	<!-- Start of the left side -->
+
+		<div class="left">
+
+		<!-- Start main div of the calender-->
+	<div class="calender-main">
+		<div class="top d-flex">
+			<div class="yymm">
+				2020 June
+			</div>
+			
+		</div>
+
+		<div class="calender">
+			
+				<ul class="days d-grid">
+					<li>SUN</li>
+					<li>MON</li>
+					<li>TUE</li>
+					<li>WED</li>
+					<li>THU</li>
+					<li>FRI</li>
+					<li>SAT</li>
+				</ul>
+
+				<ul class="d-grid">
+					<li class="extra">31</li>
+					<li>1</li>
+					<li>2</li>
+					<li class="event-day">3</li>
+					<li class="current-day">4</li>
+					<li>5</li>
+					<li>6</li>
+				</ul>
+
+				<ul class="d-grid">
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+					<li class="selected">11</li>
+					<li>12</li>
+					<li>13</li>
+				</ul>
+
+				<ul class="d-grid">
+					<li>14</li>
+					<li>15</li>
+					<li>16</li>
+					<li>17</li>
+					<li>18</li>
+					<li>19</li>
+					<li>20</li>
+				</ul>
+
+				<ul class="d-grid">
+					<li>21</li>
+					<li>22</li>
+					<li>23</li>
+					<li>24</li>
+					<li>25</li>
+					<li>26</li>
+					<li>27</li>
+				</ul>
+
+				<ul class="d-grid">
+					<li>28</li>
+					<li>29</li>
+					<li>30</li>
+					<li class="extra">1</li>
+					<li class="extra">2</li>
+					<li class="extra">3</li>
+					<li class="extra">4</li>
+				</ul>
+			
+			
+		</div>
+
+	<!-- End main div of the calender-->
+
+	</div>
+
+	<!-- Start todo list-->
+	<div class="to-do-list">
+		<div class="title">
+			<h3>To do list</h3>
+			
+		</div>
+		<div class="checkbox">
+			<form action="/action_page.php">
+			  <input type="checkbox" id="task1" name="task1" value="task1">
+			  <label for="task1"> Dive more into Bootstrap</label><br>
+			  <input type="checkbox" id="task1" name="task2" value="task2">
+			  <label for="task2"> Learn JavaScript</label><br>
+			  <input type="checkbox" id="task3" name="task3" value="task3">
+			  <label for="task3"> Learn Jquery</label><br>
+			  <div class="add-new">
+			  	<a href="#">
+			  <span class="add"><i class="fas fa-plus"></i></span>
+			  <span> Add</span><br><br>
+			     </a>
+			  </div>
+			  <!--<input type="submit" value="Submit">-->
+			</form>
+
+			
+		</div>
+		
+	</div>
+
+	<!-- End todo list-->
+
+
+	<!-- End of the left side -->
+
+	</div>
+	<!-- Start of the right side -->
+
+	<div class="right">
+		<h3>Today's notes</h3>
+		<!-- Start main notes div -->
+		<div class="notes">
+			
+	<!-- Start writing a note -->
+		
+		<div class="write-note">
+				<div class="write-note-subject">
+					<input type="text" name="" placeholder="Subject">
+					<button type="button" class="chose-color" onclick="drop()"></button>
+							<div class="color-menu">
+										<ul>
+											<li>Blue<span class="blue"> </span></li>
+											<li>Black<span class="black"></> </spanli>
+											<li>White<span class="default white"> </span></li>
+
+										</ul>
+								</div>
+	            </div>
+				<textarea id="" name="" rows="8" cols="50" style="resize: none;" placeholder="Write your note here..."></textarea>
+				<div class="note-creation-button">
+				<button type="button" class="create-note">Create Note</button>
+				</div>
+
+	<!-- End writing a note -->
+		</div>
+	<!-- start list of notes -->
+
+		<div class="note-blue note">
+			<div class="note-info d-flex">
+				<h4>I'm a Note YAY!</h4>
+				<span>21:31</span>
+				<button type="button" class="chose-color"></button>
+				<div class="color-menu">
+					<ul>
+						<li>Blue<span class="blue"> </span></li>
+						<li>Black<span class="black"></> </spanli>
+						<li>White<span class="default white"> </span></li>
+
+					</ul>
+				</div>
+				
+			</div>
+				<p>Hey there this is a simple paragraph</p>
+
+		</div>
+		<div class="note-default note">
+			<div class="note-info d-flex">
+				<h4>I'm a Note YAY!</h4>
+				<span>21:31</span>
+				<button type="button" class="chose-color"></button>
+				<div class="color-menu">
+					<ul>
+						<li>Blue<span class="blue"> </span></li>
+						<li>Black<span class="black"></> </spanli>
+						<li>White<span class="default white"> </span></li>
+
+					</ul>
+				</div>
+
+			</div>
+				<p>Hey there this is a simple paragraph</p>
+			
+		</div>
+		<div class="note-blue note">
+			<div class="note-info d-flex">
+				<h4>I'm a Note YAY!</h4>
+				<span>21:31</span>
+				<button type="button" class="chose-color"></button>
+				<div class="color-menu">
+					<ul>
+						<li>Blue<span class="blue"> </span></li>
+						<li>Black<span class="black"></> </spanli>
+						<li>White<span class="default white"> </span></li>
+
+					</ul>
+				</div>
+				
+			</div>
+				<p>Hey there this is a simple paragraph</p>
+
+		</div>
+		<div class="note-black note">
+			<div class="note-info d-flex">
+				<h4>I'm a Note YAY!</h4>
+				<span>21:31</span>
+				<button type="button" class="chose-color"></button>
+				<div class="color-menu">
+					<ul>
+						<li>Blue<span class="blue"> </span></li>
+						<li>Black<span class="black"></> </spanli>
+						<li>White<span class="default white"> </span></li>
+
+					</ul>
+				</div>
+				
+			</div>
+				<p>Hey there this is a simple paragraph</p>
+
+		</div>
+		
+		<div class="note-default note">
+			<div class="note-info d-flex">
+				<h4>I'm a Note YAY!</h4>
+				<span>21:31</span>
+				<button type="button" class="chose-color"></button>
+				<div class="color-menu">
+					<ul>
+						<li>Blue<span class="blue"> </span></li>
+						<li>Black<span class="black"></> </spanli>
+						<li>White<span class="default white"> </span></li>
+
+					</ul>
+				</div>
+				
+			</div>
+				<p>Hey there this is a simple paragraph</p>
+
+		</div>
+
+	<!-- End list of notes -->
+
+	<!-- Start pagination -->
+		<ul class="d-flex pages">
+			<li><a href="">1</a></li>
+			<li><a href="">2</a></li>
+			<li><a href="">3</a></li>
+		</ul>
+	<!-- End pagination -->
+
+		</div>
+	<!-- End of the right side -->
+
+	</div>
+	<!-- Start main notes div -->
+
+	</div>
+	<!-- End main div -->	
+
+<script type="text/javascript">
+	function drop() {
+		// body...
+		document.getElementById("color-menu").style.display = "block";
+
+	}
+</script>
+</body>
+</html>
