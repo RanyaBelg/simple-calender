@@ -1,4 +1,6 @@
-
+html,body{
+  height: 100vh;
+}
 *{
   box-sizing: border-box;
   position: relative;
@@ -14,14 +16,14 @@ body{
 .main{
   width: 90%;
   display: grid;
-  grid-template-columns: 1.7fr 2.3fr;
+  grid-template-columns: 1.5fr 2.5fr;
   padding: 20px;
   margin: 40px auto;
   border-radius: 30px;
-  background: linear-gradient(145deg, #ffffff, #e1e1e1);
+  background: linear-gradient(145deg, #eeeeee2e, #d3d3d3);
   box-shadow:  7px 7px 15px #e1e1e1, 
                -7px -7px 15px #ffffff;
-  
+
 }
 /*== Start of the Global styles ==*/
 a{
@@ -182,7 +184,7 @@ border-radius: 5px;
 }
 .write-note-subject .chose-color{
   position: absolute;
-  left: 90%;
+  right:10px;
   top: 7px;
   border-radius: 5px;
   height: 22px;
@@ -325,3 +327,122 @@ border-radius: 5px;
 }
  
 /*== End notes ==*/
+/*== Media queries ==*/
+/* max-width ---> if the scree size IS OR LESS THEN , then ... */
+/* min-width ---> if the screen size is MORE THAN , then ... */
+/*== Start of the whole body queries ==*/
+@media only screen and (max-width: 1200px) {
+.main{
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  grid-template-columns: 1.3fr 2.7fr;
+  background: linear-gradient(145deg, #eeeeee2e, #d3d3d3);
+  box-shadow: none;
+
+}
+.d-grid{
+    display: grid;
+    grid-template-columns: repeat(7,47px);
+}
+.notes .write-note, .notes .note {
+    width: 49%;
+    margin-right: 27px;
+}
+.calender-main, .checkbox {
+    width: 340px;
+}
+
+}
+@media only screen and (max-width: 1100px){
+.notes {
+    display: block;
+}
+.notes .write-note, .notes .note {
+    width: 100%;
+}
+.main{
+  overflow-y: hidden;
+  width: 100%;
+  grid-template-columns: 0.7fr 1.3fr;
+
+
+}
+}
+
+@media only screen and (max-width: 890px){
+
+.main{
+
+  grid-template-columns: 1fr;
+}
+.main .left{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.d-grid {
+    grid-template-columns: repeat(7,44.5px);
+}
+.to-do-list {
+  padding: 0;
+  margin-top: 0;
+}
+}
+
+@media only screen and (max-width: 760px){
+
+.main{
+  grid-template-columns: 1fr;
+}
+.main .left{
+  display: block;
+}
+
+.d-grid {
+    grid-template-columns: repeat(7,79px);
+}
+.d-grid li{
+  height: 43px;
+}
+.d-grid.days li{
+  height: 18px;
+}
+.calender-main, .to-do-list, .right h3, .notes {
+    width: 530px;
+    margin: auto;
+}
+.right h3 , .title h3{
+  margin: 3px auto 16px auto
+
+}
+.to-do-list {
+  margin-top: 35px;
+}
+}
+@media only screen and (max-width: 600px){
+
+.d-grid {
+    grid-template-columns: repeat(7,55px);
+}
+.d-grid li{
+  height: 42px;
+}
+.d-grid.days li{
+  height: 13px;
+}
+.calender-main, .to-do-list, .right h3, .notes {
+    width: 90%;
+    margin: auto;
+}
+.right h3 , .title h3{
+  margin: 3px auto 16px auto
+
+}
+.to-do-list {
+  margin-top: 35px;
+}
+}
+
+
+/*== End of the whole body queries ==*/
